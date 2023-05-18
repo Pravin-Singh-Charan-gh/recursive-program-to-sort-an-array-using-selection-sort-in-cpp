@@ -11,9 +11,7 @@ int min_index(int arr[],int s,int e){
 void selection_sort(int arr[],int s,int e){
     if(s==e)return;
     int mini=min_index(arr,s,e);
-    int temp=arr[s];
-    arr[s]=arr[mini];
-    arr[mini]=temp;
+    swap(arr[s],arr[mini]);
     
     selection_sort(arr,s+1,e);
 }
